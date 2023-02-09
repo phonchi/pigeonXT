@@ -11,7 +11,7 @@ from setuptools import find_packages, setup, Command
 
 NAME = "pigeonXT-jupyter"
 DESCRIPTION = "Quickly annotate data in Jupyter notebooks."
-URL = "https://github.com/dennisbakhuis/pigeonXT"
+URL = "https://github.com/phonchi/pigeonXT"
 EMAIL = "pypi@bakhuis.nu"
 AUTHOR = "Dennis Bakhuis"
 
