@@ -249,28 +249,28 @@ def annotate(
         with out:
             clear_output(wait=True)
             example_text = annotations.at[ix, example_column]
-            style_text = "<style>div.output_scroll { height: 88em; width: 100%}</style>"
+            #style_text = "<style>div.output_scroll { height: 88em; width: 100%}</style>"
 
-            if bionic_reading:
-                example_text = " ".join(
-                    [
-                        f"<b>{word[:bionic_first_characters]}</b>{word[bionic_first_characters:]}"
-                        if len(word) > bionic_minimal_words
-                        else word
-                        for word in example_text.split()
-                    ]
-                )
+            #if bionic_reading:
+                #example_text = " ".join(
+                    #[
+                    #    f"<b>{word[:bionic_first_characters]}</b>{word[bionic_first_characters:]}"
+                    #    if len(word) > bionic_minimal_words
+                    #    else word
+                    #   for word in example_text.split()
+                    #]
+                #)
 
-            if checkerboard:
-                example_text = ".".join(
-                    [
-                        f'<span style="background-color:{checkerboard_colors[k % 2]}">{word}</span>'
-                        for k, word in enumerate(example_text.split("."))
-                    ]
-                )
+            #if checkerboard:
+                #example_text = ".".join(
+                #    [
+                #        f'<span style="background-color:{checkerboard_colors[k % 2]}">{word}</span>'
+                #        for k, word in enumerate(example_text.split("."))
+                #    ]
+                #)
 
-            decorated_text = HTML(style_text + f"<body><div>{example_text}</div></body>")
-            display_fn(decorated_text)
+            #decorated_text = HTML(style_text + f"<body><div>{example_text}</div></body>")
+            display_fn(example_text)
 
     def add_annotation(annotation):
         """Toggle annotation."""
