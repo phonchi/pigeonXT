@@ -1,5 +1,5 @@
 """Main annotation function."""
-from typing import Callable, Optional, Union
+from typing import Callable, Optional, Union, Tuple
 import functools
 
 from IPython.display import display, HTML, clear_output
@@ -40,7 +40,7 @@ def annotate(
     bionic_minimal_words: int = 6,
     bionic_first_characters: int = 2,
     checkerboard: bool = False,
-    checkerboard_colors: tuple[str, str] = ("#e1e3e1", "#bab8b8"),
+    checkerboard_colors: Tuple[str, str] = ("#e1e3e1", "#bab8b8"),
 ):
     """
     Build an interactive widget for annotating a list or DataFrame of input examples.
